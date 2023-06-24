@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    120deg,
+    rgb(131, 86, 86),
+    rgb(60, 81, 90),
+    rgb(39, 69, 54),
+    rgb(131, 86, 86)
+  );
+  padding-top: 80px;
+}
+
+h1 {
+  color: aliceblue;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.7rem;
+  padding: 20px;
+  margin-top: -100px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  color: aliceblue;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+  padding: 15px;
+}
+
+span {
+  color: rgb(255, 255, 0);
+  font-size: 1.5rem;
+}
+
+#mainSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 7px;
+}
+
+/* .cards {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(59, 22, 18);
+  background-size: cover;
+  border-radius: 0.2rem;
+  margin: 7px;
+  border: 3px solid rgb(0, 131, 167);
+  box-shadow: 1px 3px 8px silver;
+}
+
+.cardSelected {
+  border: 3px solid rgb(0, 255, 17);
+  box-shadow: none;
+}
+
+.matched_cards {
+  border: 3px solid rgb(255, 0, 0);
+  box-shadow: none;
+} */
+
+.cards {
+  position: relative;
+  transition: all 0.3s linear;
+  transform-style: preserve-3d;
+  margin: 7px;
+  border-radius: 0.2rem;
+  border: 3px solid rgb(0, 131, 167);
+  box-shadow: 1px 3px 8px silver;
+  cursor: pointer;
+}
+
+.cards,
+.back_card,
+.front_card {
+  height: 80px;
+  width: 80px;
+}
+
+.back_card,
+.front_card {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.front_card {
+  background-image: url(./Images/flipMe.jpeg);
+  background-size: contain;
+  border: 3px solid rgb(0, 131, 167);
+  padding: 1.2rem;
+  box-shadow: none;
+}
+
+.back_card {
+  transform: rotateY(180deg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 3px solid rgb(0, 131, 167);
+  box-shadow: 1px 3px 8px silver;
+  padding: 1.2rem;
+}
+
+.cardSelected {
+  transform: rotateY(180deg);
+}
+
+.matched_cards .front_card {
+  background-image: url(./Images/green-tick.png);
+}
