@@ -1,1 +1,1 @@
-![Screenshot (2978)](https://github.com/ItsMeShashu/JS-Memory-Game/assets/111221384/4322bb01-19aa-4f5d-99da-fe9b5faabfe4)
+![Screenshot (2978)](https://github.com/ItsMeShashu/JS-Memory-Game/assets/111221384/3e2c524c-9329-447e-92b6-d988c97b795f)
